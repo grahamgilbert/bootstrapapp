@@ -62,7 +62,7 @@ def gen_manifest():
     # if the manifests dir doesn't exist, make it
     if not os.path.exists(os.path.join(munki_repo, 'manifests')):
         os.makedirs(os.path.join(munki_repo, 'manifests'))
-        
+
     # if the manifest doesn't already exist set the catalog
     if not os.path.isfile(manifest_file):
         manifest = {}
@@ -133,4 +133,4 @@ task = subprocess.Popen(cmd, stdout=subprocess.PIPE).communicate()[0]
     return script
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0', debug=DEBUG)
